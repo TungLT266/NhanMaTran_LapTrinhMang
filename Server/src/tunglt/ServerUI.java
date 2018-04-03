@@ -2,7 +2,6 @@ package tunglt;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import javax.swing.JFrame;
 
 /**
  *
@@ -14,12 +13,13 @@ public class ServerUI extends javax.swing.JFrame {
     
     public ServerUI() {
         initComponents();
-        setSize(495, 190);
+        setSize(595, 500);
         setLocationRelativeTo(null);
-        jPanel1.setVisible(false);
         setResizable(false);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         taServer.setEditable(false);
+        
+        server = new Server(this);
+        taServer.append(nowTime() + ": Server đã khởi động.\n");
     }
 
     /**
@@ -34,11 +34,9 @@ public class ServerUI extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         taServer = new javax.swing.JTextArea();
-        jPanel2 = new javax.swing.JPanel();
-        bStartServer = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("START SERVER");
+        setTitle("Nhóm 6");
         getContentPane().setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -54,40 +52,8 @@ public class ServerUI extends javax.swing.JFrame {
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 590, 470);
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel2.setLayout(null);
-
-        bStartServer.setBackground(java.awt.Color.cyan);
-        bStartServer.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        bStartServer.setForeground(new java.awt.Color(255, 255, 255));
-        bStartServer.setText("START SERVER");
-        bStartServer.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bStartServerActionPerformed(evt);
-            }
-        });
-        jPanel2.add(bStartServer);
-        bStartServer.setBounds(100, 50, 300, 50);
-
-        getContentPane().add(jPanel2);
-        jPanel2.setBounds(0, 0, 490, 160);
-
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void bStartServerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bStartServerActionPerformed
-        server = new Server(this);
-        
-        jPanel1.setVisible(true);
-        jPanel2.setVisible(false);
-        setTitle("SERVER");
-        setSize(595, 500);
-        taServer.append(nowTime() + ": Server đã khởi động.\n");
-
-        setVisible(false);
-        setLocationRelativeTo(null);
-        setVisible(true);
-    }//GEN-LAST:event_bStartServerActionPerformed
 
     /**
      * @param args the command line arguments
@@ -129,9 +95,7 @@ public class ServerUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton bStartServer;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     public javax.swing.JTextArea taServer;
     // End of variables declaration//GEN-END:variables

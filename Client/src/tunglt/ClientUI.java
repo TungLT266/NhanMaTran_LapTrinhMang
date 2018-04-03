@@ -25,6 +25,8 @@ public class ClientUI extends javax.swing.JFrame {
         error.setVisible(false);
         send.setVisible(false);
         taResult.setEditable(false);
+        jScrollPane1.setVisible(false);
+        jScrollPane2.setVisible(false);
         
         this.addWindowListener(new WindowListener() {
             @Override public void windowOpened(WindowEvent e) {}
@@ -87,6 +89,7 @@ public class ClientUI extends javax.swing.JFrame {
         taResult = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Nhóm 6");
         setBackground(new java.awt.Color(255, 255, 255));
         getContentPane().setLayout(null);
 
@@ -296,6 +299,8 @@ public class ClientUI extends javax.swing.JFrame {
                 pMaTran1.removeAll();
                 pMaTran2.removeAll();
                 error.setVisible(false);
+                jScrollPane1.setVisible(true);
+                jScrollPane2.setVisible(true);
                 
                 tfMaTran1 = new JTextField[m1][n1];
                 tfMaTran2 = new JTextField[m2][n2];

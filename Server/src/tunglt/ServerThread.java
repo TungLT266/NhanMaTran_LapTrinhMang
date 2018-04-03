@@ -65,21 +65,21 @@ public class ServerThread extends Thread {
             
             for (int i=0; i<msg.m1; i++) {
                 for (int j=0; j<msg.n1; j++) {
-                    ui.taServer.append(msg.maTran1[i][j]+"\t");
+                    ui.taServer.append("\t"+msg.maTran1[i][j]);
                 }
                 ui.taServer.append("\n");
             }
             ui.taServer.append("\n\t*\n\n");
             for (int i=0; i<msg.m2; i++) {
                 for (int j=0; j<msg.n2; j++) {
-                    ui.taServer.append(msg.maTran2[i][j]+"\t");
+                    ui.taServer.append("\t"+msg.maTran2[i][j]);
                 }
                 ui.taServer.append("\n");
             }
             ui.taServer.append("\n\t=\n\n");
             for (int i=0; i<msg.m1; i++) {
                 for (int j=0; j<msg.n2; j++) {
-                    ui.taServer.append(result[i][j]+"\t");
+                    ui.taServer.append("\t"+result[i][j]);
                 }
                 ui.taServer.append("\n");
             }
