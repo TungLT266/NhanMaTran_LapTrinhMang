@@ -19,7 +19,7 @@ public class Client implements Runnable {
     
     public Client(ClientUI ui) throws IOException{
         this.ui = ui;
-        server = new Socket("localhost", 13000);
+        server = new Socket("192.168.1.3", 9999);
         Out = new ObjectOutputStream(server.getOutputStream());
         Out.flush();
         In = new ObjectInputStream(server.getInputStream());

@@ -21,7 +21,7 @@ public class Server implements Runnable {
         this.ui = ui;
         
         try{
-            server = new ServerSocket(13000);
+            server = new ServerSocket(9999);
             thread = new Thread(this);
 	    thread.start();
         }
